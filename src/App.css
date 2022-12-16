@@ -1,79 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
-.container{
-  font-family: 'Poppins', sans-serif;
-  overflow-x:hidden ;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+.container {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
   width: 100%;
-
 }
-.page1{
+.page1 {
   width: 100%;
   height: 500px;
 }
-.heros{
+.heros {
   overflow-x: hidden;
   width: 100%;
   margin: auto;
 }
-.body-info{
+.body-info {
   display: flex;
-  justify-content:space-between;
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   width: 80%;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin: auto;
-  
 }
-h4{
+h4 {
   font-weight: 100;
-  color:hsl(257, 7%, 63%);
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 1rem;
+  color: hsl(257, 7%, 63%);
+  font-family: "Poppins", sans-serif;
   line-height: 1.5rem;
 }
-.info-text{
-  
+.info-text {
   margin-bottom: 8rem;
-
- 
 }
-.working{
-position: relative;
-left: 20rem;
- margin-bottom: 5rem;
-
+.working {
+  position: relative;
+  left: 20rem;
+  margin-bottom: 5rem;
 }
-.info1{
+.info1 {
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 60px;
-  line-height:80px;
- margin-bottom: 1rem;
+  line-height: 80px;
+  margin-bottom: 1rem;
 }
-.getstarted{
+.getstarted {
   color: white;
   background-color: hsl(180, 66%, 49%);
   padding: 15px 60px;
-  border-radius:20px;
+  border-radius: 20px;
   outline: none;
   border-style: none;
   position: relative;
   top: 1rem;
 }
 
-h2{
-  font-family: 'Poppins',sans-serif;
+h2 {
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
 }
-.boost{
-  background-image: url('./images/bg-boost-desktop.svg');
+.boost {
+  background-image: url("./images/bg-boost-desktop.svg");
   width: 100%;
   height: 13rem;
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: hsl(257, 27%, 26%);
   color: white;
 }
-.boost-info{
+.boost-info {
   position: relative;
   text-align: center;
   top: 4rem;
