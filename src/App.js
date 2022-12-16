@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Nav/Navbar';
 import working from './images/illustration-working.svg'
 import UrlShortner from './components/urlShortner/urlShortner';
-// import Stats from './components/statistics/stats';
+import Advance from './pages/Advance';
 import data from '../src/data'
 import List from './components/List/list';
 
@@ -27,17 +27,19 @@ function App() {
              </div>
             </section>
              <UrlShortner/>
-             <section className='page2'>
-                <div className='stats-info'>
-                  <div className='box'>
-                    <h2>Advanced Statistics</h2>
-                    <h4 >Track how your links are performing in the web with our advanced statistics dashboard</h4>
-                </div>
-                </div>
-                <div  className='list'>
-                   {/* <List/> */}
-                </div>
+             <section>
+               <Advance/>
              </section>
+             <section>
+              <div  className='boost'>
+                <div className='boost-info'>
+                <h2>Boost your links today</h2>
+                <button className='boost-btn'>Get Started</button>
+                </div>
+                
+              </div>
+             </section>
+             
           </div>
   );
 }
