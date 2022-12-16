@@ -1,54 +1,53 @@
-.formControl{
-    background-image: url('../../images/bg-shorten-desktop.svg');
-    background-repeat:no-repeat;
-    background-size: cover;
-    position: relative;
-    width:47%;
-    padding: 30px;
-    background-color:hsl(257, 27%, 26%);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    top: 3.5rem;
-    left: 25rem;
+.formControl {
+  background-image: url("../../images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 47%;
+  padding: 30px;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  /* top: 3.5rem; */
+  bottom: 3rem;
+  margin: auto;
 }
 
-input{
-    width: 30rem;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    color: hsl(257, 7%, 63%);
-    outline: none;
-    font-family: 'Poppins',sans-serif;
+input {
+  width: 30rem;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  color: hsl(257, 7%, 63%);
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
-button{
-    margin-left: 5px;
-    padding: 15px 30px;
-    border-radius: 6px;
-    background-color:hsl(180, 66%, 49%);
-    color: white;
-    border-style: none;
-    cursor:pointer;
- 
+button {
+  margin-left: 5px;
+  padding: 15px 30px;
+  border-radius: 6px;
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border-style: none;
+  cursor: pointer;
 }
-.result{
-    display: flex;
-    background-color:white;
-    width:47%;
-    position: relative;
-    top: 7.5rem;
-    left: 25rem;
-    padding:0.5rem;
-    border-radius: 5px;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+.result {
+  display: flex;
+  background-color: white;
+  width: 47%;
+  position: relative;
+  margin: 0rem auto 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
 }
-.short-text{
+.short-text {
   color: hsl(180, 66%, 49%);
   text-align: center;
 }
-.list{
-    display: flex;
+.list {
+  display: flex;
+  align-items: center;
 }
