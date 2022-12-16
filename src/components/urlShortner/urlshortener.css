@@ -1,12 +1,16 @@
 .formControl{
-    background-image: url('');
+    background-image: url('../../images/bg-shorten-desktop.svg');
+    background-repeat:no-repeat;
+    background-size: cover;
     position: relative;
-   width:800px;
-   padding: 30px;
-  background-color:rgb(5, 5, 34);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
+    width:47%;
+    padding: 30px;
+    background-color:hsl(257, 27%, 26%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    top: 3.5rem;
+    left: 25rem;
 }
 
 input{
@@ -14,7 +18,7 @@ input{
     padding: 15px;
     border-radius: 5px;
     border: none;
-    color: hsl(257, 7%, 63%);;
+    color: hsl(257, 7%, 63%);
     outline: none;
     font-family: 'Poppins',sans-serif;
 }
@@ -25,5 +29,26 @@ button{
     background-color:hsl(180, 66%, 49%);
     color: white;
     border-style: none;
+    cursor:pointer;
  
+}
+.result{
+    display: flex;
+    background-color:white;
+    width:47%;
+    position: relative;
+    top: 7.5rem;
+    left: 25rem;
+    padding:0.5rem;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.short-text{
+  color: hsl(180, 66%, 49%);
+  text-align: center;
+}
+.list{
+    display: flex;
 }

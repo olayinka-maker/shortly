@@ -1,0 +1,60 @@
+.stats-info{
+    width: 430px;
+    text-align: center;
+    /* margin-left:500px;
+    margin-top: ; */
+    margin: auto;
+    
+  }
+  .box{
+    padding-top: 15rem;
+    text-align: center;
+  }
+  .about-us{
+    display:flex;
+    position: relative;
+    align-items: center;
+    left: 20rem;
+    top: 3rem;
+   
+
+  }
+  .brand{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 19rem;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    
+   
+  }
+ article>img{
+     padding: 15px;
+    background-color:  hsl(257, 27%, 26%);
+    border-radius:10rem;
+    position: relative;
+    bottom: 4.5rem;
+    right: 5rem;
+   
+  }
+  .list2{
+    position: relative;
+    top: 2rem;
+    left:2rem;
+
+
+  }
+  .list3{
+    position: relative;
+    top: 4.2rem;
+    left:4rem;
+  }
+  .page2{
+    width: 100%;
+    background-color:hsl(264, 15%, 94%);
+    
+  }
