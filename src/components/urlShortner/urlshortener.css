@@ -8,8 +8,6 @@
   background-color: hsl(257, 27%, 26%);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
-  /* top: 3.5rem; */
   bottom: 3rem;
   margin: auto;
 }
@@ -51,3 +49,30 @@ button {
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 375px) {
+  .formControl{
+    width:95%
+  }
+  input{
+    width:19.5rem;
+    
+  }
+  .shortenBtn{
+    margin-top: 1rem;
+    width: 19.5rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+  .result{
+    width: 95%;
+    margin: 1rem inherit;
+  }
+  .text-box{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+  
+

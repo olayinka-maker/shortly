@@ -10,6 +10,7 @@ const UrlShortner = () => {
   const [userUrl, setUserurl] = useState("");
   const [urlData, setUrlData] = useLocalStorage("urlData", []);
   const [buttonCopy, setButtonCopy] = useState("Copy");
+  const [shorten,setShorten] = useState('Shorten');
   const [active, setActive] = useState(false);
 
   const handleSubmit = (e) => {
@@ -17,15 +18,18 @@ const UrlShortner = () => {
     if (userUrl === "") {
       alert("Input is empty");
     } else {
-      const shortenLink = () => {
+    
         fetch(`https://api.shrtco.de/v2/shorten?url=${userUrl}`)
           .then((response) => {
+            setShorten('Shortening...')
             if (response.ok) {
               return response.json();
             }
             throw response;
           })
+          
           .then((data) => {
+            
             console.log(data.result);
             setUrlData([
               ...urlData,
@@ -35,7 +39,7 @@ const UrlShortner = () => {
                 link: data.result.short_link,
               },
             ]);
-            // setUrlData(data.result);
+             setShorten('Shorten');
             setUserurl("");
             // setUserurl("");
             setActive(true);
@@ -44,21 +48,13 @@ const UrlShortner = () => {
           .catch((error) => {
             console.error("Error Fetching :", error);
           });
-      };
-      shortenLink();
+    
     }
   };
   const handleCopy = () => {
     navigator.clipboard.writeText(urlData.full_short_link);
     setButtonCopy("Copied");
   };
-  // useEffect(() => {
-  //   localStorage.setItem(urlData, JSON.stringify("urlData"));
-  // }, [urlData]);
-
-  // getData = () => {
-  //   const list = localStorage.getItem("urlDat");
-  // };
 
   return (
     <div>
@@ -69,16 +65,19 @@ const UrlShortner = () => {
             onChange={(e) => setUserurl(e.target.value)}
             value={userUrl}
           />
-          <button>Shorten It</button>
+          <button className="shortenBtn">{shorten}</button>
         </form>
       </div>
       {active &&
         urlData.map((e) => (
-          <div className="result">
+          <div className="result" key={e.id}>
+          <div className="text-box">
             <h4 style={{ color: "black" }}>{e.url}</h4>
             <div className="list">
               <h4 className="short-text">{e.link}</h4>
+              </div>
               <button onClick={handleCopy}> {buttonCopy}</button>
+             
             </div>
           </div>
         ))}

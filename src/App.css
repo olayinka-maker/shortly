@@ -2,11 +2,11 @@
 .container {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
 }
 .page1 {
   width: 100%;
-  height: 500px;
+  height: 600px;
 }
 .heros {
   overflow-x: hidden;
@@ -70,4 +70,35 @@ h2 {
   position: relative;
   text-align: center;
   top: 4rem;
+}
+@media  (max-width: 375px) {
+ 
+  .body-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 375px;
+  
+  
+  }
+  .info1{
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    line-height:3rem;
+  }
+  h4{
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .working{
+    left: 0;
+    width: 25rem;
+    margin-left: 8rem;
+    margin-bottom: 0;
+  }
+  .getstarted{
+    left: 6rem;
+  }
 }

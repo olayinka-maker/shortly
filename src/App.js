@@ -6,14 +6,22 @@ import UrlShortner from "./components/urlShortner/urlShortner";
 import Advance from "./pages/Advance";
 import data from "../src/data";
 import List from "./components/List/list";
+import Footer from "./components/Footer/footer";
+import Modals from "./components/Modal/modals";
 
 function App() {
-  const [stat, setStat] = useState(data);
+
+  const[showModal,setShowModal]= useState(false);
+
+  const showModalClass = () =>{
+    setShowModal(!showModal);
+  }
 
   return (
     <div className="container">
       <section className="page1">
-        <Navbar />
+        <Navbar showModalClass={showModalClass} showModal={showModal} />
+        {showModal && <Modals />}
         <div className="heros">
           <div className="body-info">
             <div className="info-text">
@@ -30,7 +38,6 @@ function App() {
         </div>
       </section>
       <section>
-        {/* <UrlShortner /> */}
         <Advance />
       </section>
       <section>
@@ -41,6 +48,7 @@ function App() {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }
