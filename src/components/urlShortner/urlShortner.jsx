@@ -10,49 +10,45 @@ const UrlShortner = () => {
   const [userUrl, setUserurl] = useState("");
   const [urlData, setUrlData] = useLocalStorage("urlData", []);
   const [buttonCopy, setButtonCopy] = useState("Copy");
-  const [shorten,setShorten] = useState('Shorten');
-  const [active, setActive] = useState(false);
+  const [shorten, setShorten] = useState("Shorten");
+
+  console.log(urlData);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (userUrl === "") {
       alert("Input is empty");
     } else {
-    
-        fetch(`https://api.shrtco.de/v2/shorten?url=${userUrl}`)
-          .then((response) => {
-            setShorten('Shortening...')
-            if (response.ok) {
-              return response.json();
-            }
-            throw response;
-          })
-          
-          .then((data) => {
-            
-            console.log(data.result);
-            setUrlData([
-              ...urlData,
-              {
-                id: data.result.code,
-                url: data.result.original_link,
-                link: data.result.short_link,
-              },
-            ]);
-             setShorten('Shorten');
-            setUserurl("");
-            // setUserurl("");
-            setActive(true);
-            console.log(urlData);
-          })
-          .catch((error) => {
-            console.error("Error Fetching :", error);
-          });
-    
+      fetch(`https://api.shrtco.de/v2/shorten?url=${userUrl}`)
+        .then((response) => {
+          setShorten("Shortening...");
+          if (response.ok) {
+            return response.json();
+          }
+          throw response;
+        })
+
+        .then((data) => {
+          console.log(data.result);
+          setUrlData([
+            ...urlData,
+            {
+              id: data.result.code,
+              url: data.result.original_link,
+              link: data.result.short_link,
+            },
+          ]);
+          setShorten("Shorten");
+          setUserurl("");
+          console.log(urlData);
+        })
+        .catch((error) => {
+          console.error("Error Fetching :", error);
+        });
     }
   };
-  const handleCopy = () => {
-    navigator.clipboard.writeText(urlData.full_short_link);
+  const handleCopy = (e) => {
+    navigator.clipboard.writeText(e.link);
     setButtonCopy("Copied");
   };
 
@@ -68,19 +64,17 @@ const UrlShortner = () => {
           <button className="shortenBtn">{shorten}</button>
         </form>
       </div>
-      {active &&
-        urlData.map((e) => (
-          <div className="result" key={e.id}>
+      {urlData.map((e) => (
+        <div className="result" key={e.id}>
           <div className="text-box">
             <h4 style={{ color: "black" }}>{e.url}</h4>
             <div className="list">
               <h4 className="short-text">{e.link}</h4>
-              </div>
-              <button onClick={handleCopy}> {buttonCopy}</button>
-             
             </div>
+            <button onClick={() => handleCopy(e)}> {buttonCopy}</button>
           </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
 };

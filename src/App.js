@@ -10,18 +10,10 @@ import Footer from "./components/Footer/footer";
 import Modals from "./components/Modal/modals";
 
 function App() {
-
-  const[showModal,setShowModal]= useState(false);
-
-  const showModalClass = () =>{
-    setShowModal(!showModal);
-  }
-
   return (
     <div className="container">
       <section className="page1">
-        <Navbar showModalClass={showModalClass} showModal={showModal} />
-        {showModal && <Modals />}
+        <Navbar />
         <div className="heros">
           <div className="body-info">
             <div className="info-text">
@@ -48,7 +40,7 @@ function App() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

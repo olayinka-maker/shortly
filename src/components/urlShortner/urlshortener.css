@@ -51,28 +51,33 @@ button {
 }
 
 @media (max-width: 375px) {
-  .formControl{
-    width:95%
+  .formControl {
+    width: 95%;
+    margin: auto;
+    padding: 30px 4px;
+    justify-content: center;
   }
-  input{
-    width:19.5rem;
-    
+
+  form {
+    width: 80%;
+    margin: auto;
   }
-  .shortenBtn{
+
+  input {
+    width: 100%;
+  }
+  .shortenBtn {
     margin-top: 1rem;
-    width: 19.5rem;
+    width: 100%;
     margin: 1rem auto;
-    padding: 1.5rem;
   }
-  .result{
+  .result {
     width: 95%;
     margin: 1rem inherit;
   }
-  .text-box{
+  .text-box {
     display: flex;
     width: 100%;
     flex-direction: column;
   }
 }
-  
-
